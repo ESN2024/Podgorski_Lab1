@@ -9,25 +9,26 @@
 #include <stdbool.h>
 
 __uint32_t sleep_time=10000;
-bool flag_chenillard = 0;
+__uint8_t val_leds=0x00;
+bool flag_chenillard = 1;
 
 void Chenillard(){
 
-    alt_printf("on entre dans la fonction chenillard \n");
-    __uint8_t val_leds=0x01;
+    //alt_printf("on entre dans la fonction chenillard \n");
+    val_leds=0x01;
     IOWR_ALTERA_AVALON_PIO_DATA(PIO_0_BASE,val_leds);
 
     for(__uint8_t i=0;i<7;i++){
         usleep(sleep_time);
         val_leds = val_leds << 1;
-        alt_printf("val leds : %x\n",val_leds);
+        //alt_printf("val leds : %x\n",val_leds);
         IOWR_ALTERA_AVALON_PIO_DATA(PIO_0_BASE,val_leds);
     }
     for(__uint8_t j=0;j<7;j++){
         usleep(sleep_time);
         val_leds = val_leds >> 1;
         IOWR_ALTERA_AVALON_PIO_DATA(PIO_0_BASE,val_leds);
-        alt_printf("val leds 2nd phase : %x\n",val_leds);
+        //alt_printf("val leds 2nd phase : %x\n",val_leds);
     }
     usleep(sleep_time);
     IOWR_ALTERA_AVALON_PIO_DATA(PIO_0_BASE,0x00);
@@ -37,6 +38,8 @@ static void irqhandler_button (void * context, alt_u32 id)
 {
     IOWR_ALTERA_AVALON_PIO_EDGE_CAP(PIO_1_BASE, 0x01);
     flag_chenillard=!flag_chenillard;
+    IOWR_ALTERA_AVALON_PIO_DATA(PIO_0_BASE,0x00);
+    val_leds=0x00;
 }
 
 
@@ -47,7 +50,7 @@ static void irqhandler_switchs (void * context, alt_u32 id)
 
     __uint8_t masque=0x0f;
     switchs_vals=masque & IORD_ALTERA_AVALON_PIO_DATA(PIO_2_BASE);
-    alt_printf("switchsvals : %x\n",switchs_vals);
+    //alt_printf("switchsvals : %x\n",switchs_vals);
     sleep_time = switchs_vals * 10000 + 10000;
 
 
@@ -74,7 +77,7 @@ static void init_switchs_pio()
 
     __uint8_t masque=0x0f;
     switchs_vals=masque & IORD_ALTERA_AVALON_PIO_DATA(PIO_2_BASE);
-    alt_printf("switchsvals : %x\n",switchs_vals);
+    //alt_printf("switchsvals : %x\n",switchs_vals);
     sleep_time = switchs_vals * 10000 + 10000;
 
     // Enable all 4 switchs interrupts.
@@ -89,7 +92,7 @@ static void init_switchs_pio()
 
 
 int main(){
-    alt_printf("Hello NIOS II\n");
+    //alt_printf("Hello NIOS II\n");
 
     // Initialise le processus d'interruption pour le PIO qui controle les bouttons
     init_button_pio();
