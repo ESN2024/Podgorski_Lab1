@@ -5,7 +5,7 @@
 #include <io.h>
 #include <alt_types.h>
 #include "sys/alt_sys_init.h"
-
+#include "unistd.h"
 
 void delay(){
 
@@ -15,12 +15,14 @@ void delay(){
 
 void Chenillard(){
 
-    static int val_leds=0x01;
+    alt_printf("on entre dans la fonction chenillard \n");
+    int val_leds=0x01;
     //IOWR_ALTERA_AVALON_PIO_DIRECTION(PIO_0_BASE,0x01);
 
     for(int i=0;i<8;i++){
+        alt_printf("iter %x\n",i);
         IOWR_ALTERA_AVALON_PIO_DATA(PIO_0_BASE,val_leds);
-        delay();
+        usleep(200000);
         val_leds = val_leds << 1;
     }
     IOWR_ALTERA_AVALON_PIO_DATA(PIO_0_BASE,0x00);
