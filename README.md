@@ -8,7 +8,8 @@ Etant donné que le sujet laisse plusieurs choix quant à comment commander ce c
 
 # Architecture du système
 
-(image canva architecture)
+![image](https://github.com/ESN2024/Podgorski_Lab1/assets/145102054/2a29d5c6-1a06-4fce-b549-39d1f2f56361)
+
 
 Le système est composé de :
 •	Un processeur Nios II
