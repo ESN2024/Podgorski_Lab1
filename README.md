@@ -1,3 +1,4 @@
+
 # **Lab 1**
 
 # Présentation :
@@ -48,3 +49,6 @@ https://github.com/ESN2024/Podgorski_Lab1/assets/145102054/d486b8e6-c7fb-4691-bb
 En suivant la procédure d'initialisation du contenu de la RAM dans le cours d'ESN10, le programme main.c se lance automatiquement sur la carte lorsque l'on flash le bitstream sur cette dernière.
 
 # Conclusion :
+
+En résumé, ce projet de création d'un chenillard sur la carte de10lite a été une magnifique expérience. Appuyer sur un bouton déclenche le chenillard, et on peut ajuster sa vitesse avec quatre switchs. 
+Ce projet m'a permis de perfectionner mes connaissances des interruptions.
