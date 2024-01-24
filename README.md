@@ -8,7 +8,8 @@ Etant donné que le sujet laisse plusieurs choix quant à comment commander ce c
 
 # Architecture du système
 
-![image](https://github.com/ESN2024/Podgorski_Lab1/assets/145102054/2a29d5c6-1a06-4fce-b549-39d1f2f56361)
+![image](https://github.com/ESN2024/Podgorski_Lab1/assets/145102054/a76f7152-69b4-4774-89e7-9a11847bd77b)
+
 
 
 Le système est composé de :
