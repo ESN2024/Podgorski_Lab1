@@ -39,7 +39,8 @@ L’appuie sur un bouton-poussoir ou un switch déclenchera une routine d’inte
 
 https://github.com/ESN2024/Podgorski_Lab1/assets/145102054/d486b8e6-c7fb-4691-bb92-1bb37f6d2931
 
+# Initialisation du contenu de la RAM :
 
-
+En suivant la procédure d'initialisation du contenu de la RAM dans le cours d'ESN10, le programme main.c se lance automatiquement sur la carte lorsque l'on flash le bitstream sur cette dernière.
 
 # Conclusion :
