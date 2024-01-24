@@ -20,7 +20,11 @@ Le système est composé de :
 •	1 PIO 8 bits qui contrôlera les leds.
 •	1 PIO 1 bits qui contrôlera le bouton poussoir.
 •	1 PIO 4 bits qui contrôlera les switchs.
+
 # Configuration matérielle :
+
+![image](https://github.com/ESN2024/Podgorski_Lab1/assets/145102054/e32bbbd4-d2c7-45a4-a879-1f60ac683438)
+
 
 Afin de configurer le FPGA, nous avons créé le fichier Qsys ci-dessus qui contient toute la description matérielle de notre système.
 Nous avons ensuite créé notre fichier top-level « Led_Chaser_main.vhd » qui instanciera les composants décrits dans le fichier Qsys.
