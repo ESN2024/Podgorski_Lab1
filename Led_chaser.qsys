@@ -376,7 +376,7 @@
   <parameter name="enPRInitMode" value="false" />
   <parameter name="enableDiffWidth" value="false" />
   <parameter name="initMemContent" value="true" />
-  <parameter name="initializationFileName">C:/intelFPGA/18.1/Quartus_FPGA_DE10Lite-TP/Software/App/mem_init/Led_chaser_onchip_memory2_0.hex</parameter>
+  <parameter name="initializationFileName">C:/Users/titou/Documents/Polytech 5A/De10Lite/Podgorski_Lab1/Software/App/mem_init/Led_chaser_onchip_memory2_0.hex</parameter>
   <parameter name="instanceID" value="NONE" />
   <parameter name="memorySize" value="40000" />
   <parameter name="readDuringWriteMode" value="DONT_CARE" />
